@@ -60,9 +60,3 @@ console.log(productFib(602070), [610, 987, true]);
 
 console.log(productFib(360684687203767), [14930352, 24157817, false]);
 console.log(productFib(360684687203767), [5702887, 9227465, false]);
-
-// console.log(fibo(0));
-// console.log(fibo(1));
-// console.log(fibo(2));
-// console.log(fibo(3));
-// console.log(fibo(4));

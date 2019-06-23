@@ -1,5 +1,5 @@
 def square_digits num
-  array_num = num.to_s.split(//).map{|chr| chr.to_i}.map{|chr| chr**2 }.join.to_i
+  array_num = num.to_s.split(//).map{|chr| chr.to_i**2}.join.to_i
 end
 
 puts square_digits(3212), 9414

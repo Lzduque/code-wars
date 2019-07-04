@@ -27,3 +27,8 @@ end
 puts anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']), ['aabb', 'bbaa']
 # puts anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']
 # puts anagrams('laser', ['lazing', 'lazy',  'lacer']), []
+
+# smart
+# def anagrams(word, words)
+#   words.select { |w| w.chars.sort == word.chars.sort }
+# end

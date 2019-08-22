@@ -1,11 +1,14 @@
 function order(words) {
-  let wordsArray = words.split(" ");
-  console.log("wordsArray: ", wordsArray); // [ 'is2', 'Thi1s', 'T4est', '3a' ]
-  let positionArray = wordsArray.map((word) => Number(word[word.search(/[0-9]/g)]));
-  console.log("positionArray: ", positionArray); // [ 2, 1, 4, 3 ]
-
-
-  return "Thi1s is2 3a T4est"
+  var results = ""
+  if (words != "") {
+    results = words
+    .split(" ")
+    .map((word) => word[word.search(/[0-9]/g)] + word)
+    .sort()
+    .map((word) => word.substring(1))
+    .join(" ")
+  }
+  return results
 }
 
 console.log(order("is2 Thi1s T4est 3a"), "Thi1s is2 3a T4est");

@@ -6,8 +6,10 @@ function getMiddle(s) {
     let arr = s.split("");
     if (arr.length % 2 == 0) {
       return arr[(arr.length/2) - 1] + arr[(arr.length/2)]
-    } else {
+    } else if (arr.length % 2 != 0){
       return arr[Math.round(arr.length/2) -1]
+    } else {
+      return ''
     }
   }
 

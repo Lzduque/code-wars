@@ -3,8 +3,6 @@ function tidyNumber(num: number): boolean {
   // compare this array to a sorted array
   // if it is equal is tidy, if not, return false
   let array: number[] = num.toString().split("").map((string) => Number(string));
-  // console.log("array: ", array.join(""));
-  // console.log("array.sort: ", array.sort((a, b) => a - b).join(""));
   return array.join("") === array.sort((a, b) => a - b).join("")
 }
 

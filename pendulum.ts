@@ -5,21 +5,33 @@ function pendulum(values: number[]): number[] {
   let result: number[] = []
   values.sort((a, b) => a - b)
   if values.length % 2 === 0 {
-
-    while (j <= Math.floor(values.length / 2)) {
-      let j = 0;
-      let i = values[length - 1 - (2 * j)];
-      result.push(i);
-      j ++;
+    for (let i = 0 ; i <= Math.floor(values.length / 2) ; i++ ) {
+      let j = values[length - 1 - (2 * i)];
+      result.push(j);
     }
+    for (let i = 0 ; i <= values.length - result.length ; i++ ) {
+      let j = values[i + 2 + (2 * i)];
+      result.push(j);
+    }
+  };
+  // if values.length % 2 !== 0 {
+  //   for (let i = 0 ; i <= Math.floor(values.length / 2) ; i++ ) {
+  //     let j = values[length - 1 - (2 * i)];
+  //     result.push(j);
+  //   }
+  //   for (let i = 0 ; i <= values.length - result.length ; i++ ) {
+  //     let j = values[i + 2 + (2 * i)];
+  //     result.push(j);
+  //   }
   }
+
   return result
 }
 
 console.log(pendulum([4, 10, 9]), [10, 4, 9]);
-   length - 1  length - 1 - 2  length - 1 - 2 until === 1  1 + 2  1 + 2 + 2  1 + 2 + 2 + 2 until === length
-   3  1  2  4
-5  3  1  2  4
+//    length - 1  length - 1 - 2  length - 1 - 2 until === 1  1 + 2  1 + 2 + 2  1 + 2 + 2 + 2 until === length
+//    3  1  2  4
+// 5  3  1  2  4
 
 console.log(pendulum([8, 7, 10, 3]), [8, 3, 7, 10]);
 console.log(pendulum([6, 6, 8, 5, 10]), [10, 6, 5, 6, 8]);

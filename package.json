@@ -1,0 +1,23 @@
+{
+  "name": "code-wars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_FriendorFoe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lzduque/code-wars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lzduque/code-wars/issues"
+  },
+  "homepage": "https://github.com/Lzduque/code-wars#readme",
+  "devDependencies": {
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  }
+}

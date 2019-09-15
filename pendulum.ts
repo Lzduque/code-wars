@@ -1,14 +1,7 @@
 function pendulum(values: number[]): number[] {
   values.sort((a, b) => a - b)
-  let indexOdd = [];
-  let indexEven = [];
-  for (let i = 0 ; i < values.length ; i ++) {
-    if (i % 2 === 0) {
-      indexEven.push(values[i]);
-    } else {
-      indexOdd.push(values[i]);
-    }
-  }
+  let indexOdd = values.filter((number, index) => index % 2 !== 0);
+  let indexEven = values.filter((number, index) => index % 2 === 0);
   return indexEven.sort((a, b) => b - a).concat(indexOdd)
 };
 

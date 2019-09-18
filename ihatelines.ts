@@ -24,4 +24,4 @@ function ihatelines(arr: number[], index: number): number {
 
 console.log(ihatelines([2, 6, 3, 4, 5], 2));
 
-console.log(ihatelines([6,6,7, ...[...Array(10000).map(x => 6)]], 2));
+console.log(ihatelines([6,6,7, ...[...Array(2000000)].map(x => 6)], 2));

@@ -1,10 +1,6 @@
 function flattenAndSort(inputArray: number[][]): number[] {
   // go through the main array, and concatenate every array into result array, then sort
-  let result = [];
-  for (let i = 0 ; i < inputArray.length ; i++) {
-    result = result.concat(inputArray[i]);
-  };
-  return result.sort((a, b) => a - b);
+  return inputArray.reduce((acc , arr) => acc.concat(arr), []).sort((a, b) => a - b);
 }
 
 console.log(flattenAndSort([]), []);

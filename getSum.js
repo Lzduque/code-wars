@@ -1,20 +1,9 @@
 function getSum(a, b) {
-    let result;
-    let nums = [];
     const max = Math.max(a, b);
     const min = Math.min(a, b);
 
-    if (a === b) {
-        result = a;
-        return result;
-    } else {
-        for (let i = min; i <= max; i++) {
-            nums.push(i);
-        }
-    }
-
-    result = nums.reduce((acc, current) => acc + current, 0);
-    return result;
+    if (max === min) return max;
+    else return min + getSum(min + 1, max);
 }
 
 console.log(getSum(1, 0), 1, getSum(1, 0) === 1);

@@ -1,16 +1,10 @@
 function growingPlant(upSpeed, downSpeed, desiredHeight) {
-    let height = 0;
-    let heights = [];
-
-    while (height < desiredHeight) {
-        heights.push(height += upSpeed);
-        heights.push(height -= downSpeed);
+    var i = 1;
+    for (let height = upSpeed; height < desiredHeight; height += upSpeed) {
+        height -= downSpeed;
+        i++;
     }
-    for (let i = 0; i <= heights.length; i++) {
-        if (heights[i] >= desiredHeight) {
-            return Math.round((i + 1) / 2);
-        }
-    }
+    return i;
 }
 
 console.log(growingPlant(100, 10, 910), 10, growingPlant(100, 10, 910) === 10);

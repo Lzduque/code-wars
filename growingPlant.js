@@ -1,4 +1,4 @@
-function growingPlant(upSpeed, downSpeed, desiredHeight) {;
+function growingPlant(upSpeed, downSpeed, desiredHeight) {
     let height = upSpeed;
     for (var i = 1; height < desiredHeight; i++) {
         height += upSpeed;

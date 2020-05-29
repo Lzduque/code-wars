@@ -3,12 +3,7 @@ const words = (unwords) => unwords.join(' ');
 
 const removeDuplicateWords = (s) => {
     const allWords = unwords(s);
-    const uniqueWords = [];
-    for (const word of allWords) {
-        if (!uniqueWords.includes(word)) {
-            uniqueWords.push(word);
-        }
-    }
+    const uniqueWords = [...new Set(allWords)];
     return words(uniqueWords);
 }
 

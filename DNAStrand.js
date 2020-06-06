@@ -1,21 +1,10 @@
 function DNAStrand(dna) {
     const original = dna.split('');
     const complimentary = [];
-    for (let i = 0; i < original.length; i++) {
-        switch (original[i]) {
-            case "A":
-                complimentary.push("T");
-                break;
-            case "T":
-                complimentary.push("A");
-                break;
-            case "C":
-                complimentary.push("G");
-                break;
-            case "G":
-                complimentary.push("C");
-                break;
-        }
+    const pairs = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
+
+    for (let letter of original) {
+        complimentary.push(pairs[letter]);
     }
     return complimentary.join('');
 }

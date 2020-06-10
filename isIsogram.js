@@ -1,14 +1,6 @@
 function isIsogram(str) {
-    const letters = str.toLowerCase().split('').sort();
-    const letterCount = {};
-    for (let letter of letters) {
-        if (letterCount[letter]) {
-            return false
-        } else {
-            letterCount[letter] = 1;
-        }
-    }
-    return true;
+    const letters = str.toLowerCase().split('');
+    return new Set(letters).size === letters.length ? true : false
 }
 
 console.log(isIsogram("Dermatoglyphics"), true, isIsogram("Dermatoglyphics") === true);

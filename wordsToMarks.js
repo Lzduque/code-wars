@@ -1,7 +1,7 @@
 function wordsToMarks(string) {
     const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     const letters = string.split('');
-    return letters.reduce((acc, letter) => (acc += (alphabet.indexOf(letter) + 1), acc), 0);
+    return letters.reduce((acc, letter) => (acc + (alphabet.indexOf(letter) + 1)), 0);
 }
 
 console.log(wordsToMarks("attitude"), 100, wordsToMarks("attitude") === 100);

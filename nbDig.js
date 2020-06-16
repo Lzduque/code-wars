@@ -3,8 +3,7 @@ function nbDig(n, d) {
     for (let i = 0; i <= n; i++) {
         squared.push(Math.pow(i, 2));
     }
-    const digits = squared.map(number => number.toString().split(''))
-    const flatten = [].concat(...digits);
+    const flatten = squared.map(number => number.toString().split('')).flat();
     const numOfDs = flatten.filter(n => Number(n) === d).length;
     return numOfDs;
 }

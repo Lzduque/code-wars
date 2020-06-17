@@ -1,16 +1,10 @@
 function maxRot(n) {
-    const ps = [n];
-    const digits = n.toString().split('');
+    let str = n.toString();
+    const ps = [str];
 
-    let currentD = digits;
-    let rotateD = [];
-    for (let i = 0; i < digits.length; i++) {
-        if (i % 2 === 0) {
-            rotateD.push(currentD[i]);
-            currentD[i] = '';
-            const newDs = currentD.concat(rotateD);
-            ps.push(Number(newDs.join('')));
-        }
+    for (let i = 0; i < str.length; i++) {
+        str = str.slice(0, i) + str.slice(i + 1) + str[i];
+        ps.push(Number(str))
     }
     return Math.max(...ps);
 }

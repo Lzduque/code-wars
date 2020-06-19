@@ -1,11 +1,6 @@
 function printerError(s) {
     const l = s.length;
-    let errors = 0;
-    for (letter of s) {
-        if (letter.match(/[n-z]/)) {
-            errors += 1;
-        }
-    }
+    const errors = s.match(/[^a-m]/g).length;
     return `${errors}/${l}`;
 }
 

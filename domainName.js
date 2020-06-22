@@ -1,12 +1,8 @@
 function domainName(url) {
-  const www = url.split('www.');
-  let domain;
-  www.length >= 2 ? domain = www[1] : domain = www[0];
-
-  const http = domain.split('//');
-  http.length >= 2 ? domain = http[1] : domain = http[0];
-
-  return domain.split('.')[0];
+  url = url.replace('http://', '');
+  url = url.replace('https://', '');
+  url = url.replace('www.', '');
+  return url.split('.')[0];
 }
 
 

@@ -2,10 +2,9 @@ function accum(s) {
     const letters = s.toLowerCase().split('');
     const acc = [];
     for (let i = 0; i < letters.length; i++) {
-        acc.push(letters[i].repeat(i + 1));
+        acc.push(letters[i].toUpperCase() + letters[i].repeat(i));
     }
-    const result = acc.map((letters) => letters[0].toUpperCase() + letters.slice(1));
-    return result.join('-');
+    return acc.join('-');
 }
 
 console.log(accum("ZpglnRxqenU") === "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
